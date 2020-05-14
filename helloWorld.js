@@ -15,6 +15,13 @@ app.get("/greet/Jack", (req, res)=> res.send("Hello Jack!"));
 
 app.get("/greet/Jamison", (req, res)=> res.send("I want those mallaysia contracts."));
 
+app.get("/hello1", (req, res) => {
+    let name = req.query.name || 'world';
+    
+    res.send('Hello ' + name + '!');
+
+});
+
 app.listen(port, ()=>{
     console.log(`listening at http://localhost:${port}`);
 })
